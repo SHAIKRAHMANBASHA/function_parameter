@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" name="" id="num1">
+        <input type="number" name="" id="num2">
+        <input type="submit" value="submit" onclick=" return send()">
+    </form>
+    <h1>addition</h1>
+    <p id="addition"></p>
+    <h1>subtraction</h1>
+    <p id="subtraction"></p>
+    <h1>multiply</h1>
+    <p id="multiply"></p>
+    <h1>devision</h1>
+    <p id="division"></p>
+
+    <script>
+        function send(){
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            add(a,b);
+            subtract(a,b);
+            multiply(a,b);
+            division(a,b);
+            return false;
+
+        }
+        function add(a,b){
+            var result = document.getElementById("addition");
+            result.innerHTML=a+b;
+        }
+        function subtract(x,y){
+            var result = document.getElementById("subtraction");
+            result.innerHTML=x-y;
+        }
+        function multiply(a,b){
+            var result = document.getElementById("multiply");
+            result.innerHTML=a*b;
+        }
+        function division(a,b){
+            var result = document.getElementById("division");
+            result.innerHTML=a/b;
+        }
+    </script>
+</body>
+</html>
